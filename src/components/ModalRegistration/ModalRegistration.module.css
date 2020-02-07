@@ -1,0 +1,367 @@
+.reg_container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2.5rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  background-color: var(--bg-color-white);
+}
+
+.title_h1 {
+  margin: 0;
+  margin-bottom: 3rem;
+  padding: 0;
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--text-color-black);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.form_container {
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.form {
+  width: 60%;
+  /* position: relative; */
+}
+
+.title_h2 {
+  margin-bottom: 3.53rem;
+  padding: 0;
+  font-size: 1.8rem;
+  color: var(--color-gray);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-left: 52%;
+  width: 48%;
+}
+
+.box_input {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.current_input_box:nth-of-type(2n) {
+  margin-left: 20px;
+}
+
+.current_input_box {
+  width: 48%;
+  margin-bottom: 2rem;
+}
+
+.form input {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--color-gray);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  color: var(--color-gray);
+  font-weight: 600;
+}
+
+.form input::placeholder {
+  background-color: transparent;
+  color: var(--color-gray);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.form input:-webkit-autofill,
+.form input:-webkit-autofill:hover,
+.form input:-webkit-autofill:focus,
+.form input:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--color-gray);
+  box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in 0s;
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 174, 255, 0.04) 50%,
+    rgba(255, 255, 255, 0) 51%,
+    rgba(0, 174, 255, 0.03) 100%
+  );
+}
+
+.box_showPassword {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+}
+
+.btn_eye[type='button'] {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--color-gray);
+}
+
+.eye {
+  width: 1.5em;
+  height: 1.5em;
+  fill: var(--color-gray);
+}
+
+.box_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.box_btn button {
+  width: 17vw;
+  display: block;
+  margin: 0;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 2.2vh;
+  font-size: 1.4em;
+  line-height: 2rem;
+  background-image: linear-gradient(
+    to top,
+    var(--color-yellow),
+    var(--color-dark-yellow)
+  );
+  color: var(--color-white);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  text-align: center;
+  transition: all 0.2s ease-in;
+}
+
+.box_btn button:first-child {
+  margin-right: 2rem;
+}
+
+.box_btn button:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.error {
+  width: 100%;
+  text-align: center;
+  color: #ff3561;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-top: 0.2vw;
+  margin-bottom: 20px;
+}
+
+.error_name {
+  composes: error;
+  max-width: 300px;
+}
+
+.error_age {
+  composes: error;
+  max-width: 300px;
+}
+
+/* SMALL DESCTOP */
+@media (max-width: 1979px) {
+  .title_h1 {
+    font-size: 2.2em;
+  }
+
+  .title_h2 {
+    font-size: 1.584em;
+  }
+
+  .form input {
+    font-size: 1.056em;
+    line-height: 1.32em;
+  }
+
+  .box_btn button {
+    font-size: 1.232em;
+  }
+
+  .error {
+    font-size: 0.792em;
+  }
+}
+
+/* TABLET */
+@media (max-width: 1279px) {
+  .reg_container {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .box_input {
+    margin-bottom: 35px;
+  }
+
+  .form input {
+    font-size: 0.6em;
+  }
+
+  .current_input_box {
+    width: 45%;
+    margin-bottom: 1.5rem;
+  }
+
+  .eye {
+    width: 1em;
+    height: 1em;
+  }
+
+  .box_btn button {
+    font-size: 0.7rem;
+  }
+
+  .error {
+    max-width: 100%;
+    font-size: 0.9em;
+    margin-top: 0.2vw;
+  }
+
+  .error_name {
+    composes: error;
+    max-width: 150px;
+  }
+
+  .error_age {
+    composes: error;
+    max-width: 150px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .reg_container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 0;
+    border-radius: 0;
+    overflow-y: auto;
+    padding-bottom: 1rem;
+  }
+
+  .logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+
+  .title_h1 {
+    font-size: 1.2em;
+    margin-bottom: 0.8rem;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .box_input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 10px;
+  }
+
+  .current_input_box {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .current_input_box:nth-of-type(2n) {
+    margin-left: 0;
+  }
+
+  .form input {
+    width: 100%;
+    padding: 0.2rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--color-gray);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 1.5em;
+    color: var(--color-gray);
+    font-weight: 600;
+  }
+
+  .title_h2 {
+    margin: 0 auto;
+    font-size: 1em;
+    margin-bottom: 0.7rem;
+    text-align: center;
+  }
+
+  .eye {
+    width: 1.2em;
+    height: 1.2em;
+  }
+
+  .box_btn {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box_btn button {
+    width: 100%;
+    display: block;
+    border-radius: 3rem;
+    line-height: 1rem;
+    font-size: 1rem;
+  }
+
+  .box_btn button:first-child {
+    margin-right: 0;
+  }
+
+  .box_btn button:last-child {
+    margin-bottom: 1rem;
+  }
+
+  .error {
+    max-width: 100%;
+    font-size: 10px;
+  }
+
+  .error_name {
+    max-width: 70%;
+    font-size: 10px;
+  }
+
+  .error_age {
+    max-width: 70%;
+    font-size: 10px;
+  }
+}

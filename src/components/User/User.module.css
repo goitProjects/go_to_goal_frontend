@@ -1,0 +1,38 @@
+.userInfo {
+  font-family: 'Monserrat';
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+}
+
+.btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.userName {
+  text-align: center;
+}
+
+.userAge {
+  text-align: center;
+}
+
+.userLogout {
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .userInfo {
+    max-width: 205px;
+    justify-content: space-around;
+  }
+
+  .avatar {
+    width: 50px;
+    height: auto;
+  }
+}
